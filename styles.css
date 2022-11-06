@@ -1,0 +1,442 @@
+
+/* let the broweser's margin and padding be deprived */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+
+
+                                /* styling header from here */ 
+/* header main division (parent) */
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px groove;
+}
+
+/* header-left */
+.header-left{
+    display: flex;
+    align-items: center;
+}
+
+/* haeder-left's image */
+.header-left img{
+    object-fit: contain;   /* to resize image according to given dimensions */
+    height: 70px;
+    cursor: pointer;
+}
+
+/* header-left's icon */
+.header-left i{
+    padding: 20px;          /* TRBL*/
+    cursor: pointer;        /* place a hand when we put mouse on it */
+    color: blue;
+    background-color: white;
+}
+
+/**/
+.header-left button, .header-right button{
+    border-style: none;
+    background-color: white;
+}
+
+/* header-middle */
+.header-middle{
+    display: flex;
+    flex: 0.7;         /*cover the remianing flex container's space according to number assigned  */
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* header-middle's icons targetting */
+.header-middle .material-icons, .header-middle .fa{
+    color: blue;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* header-middle's input box targetting */
+.header-middle input{
+    border-style: none;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    background-color: transparent;     /* decrease its color/hiding its colour */
+    padding: 10px;
+    font-size: small;
+}
+
+/* header-right */
+.header-right{
+    display: flex;
+    align-items: center;
+}
+
+/* header-right */
+.header-right .fa, .header-right .material-icons{
+    padding: 10px;
+    color: blue;
+    cursor: pointer;
+    background-color: white;
+}
+
+/* hover effect on first division i.e. haeder */
+.header-left i:hover, .header-middle i:hover, .header-right i:hover, .header-right span:hover{
+    background-color: gray;
+    border-radius: 50%; /* circle border*/
+}
+    
+
+
+                                    /* styling sidebar here */
+/* main sidebar */
+.side-bar{
+    background-color: white;
+    height: 100%;
+    flex: 0.3;              /*cover onky 30% of its contaibner space */
+    width: 300px;
+    position: fixed;
+    left: 0px;              /* position is fixed and its on the full left side*/
+}
+                                    
+/* compose button */
+.sidebar-compose{
+    display: flex;
+    align-items: center;
+    color: gray;
+    background-color: white;
+    padding: 15px 30px 15px 30px;   /*TRBL*/
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 5px 5px;
+    font-size: large;
+    color: black;
+}
+
+/* compose button's icon */
+.sidebar-compose i{
+    margin-right: 10px;
+    background-color: white;
+    color: blue;
+}
+
+/* vertical-menu styling */
+.vertical-menu{
+    height: 210px;
+    overflow-y: auto;          /*if data overflow, put scroll bar vertically */
+    border-top: 1px groove;
+    border-bottom: 1px groove;
+}
+
+/* targetting their anchor tags */
+.vertical-menu a, .meet-div a, .hangouts-div a{
+    background-color: white;
+    display: block;
+    padding: 14px;
+    text-decoration: none;                 /* Remove underline from links */
+}
+
+/* targetting their icons */
+.vertical-menu i, .meet-div i, .hangouts-div i{
+    margin-right: 10px;
+    padding-left: 7px;
+    color: blue;
+}
+
+/* hover effects on these */
+.vertical-menu a:hover, .sidebar-compose:hover, .dropdown-btn:hover, .meet-div a:hover, .hangouts-div a:hover{
+    background-color: lightgray;
+}
+
+/* cureently active thing */
+.vertical-menu a.active{
+    background-color: lightgray;        /* active means current working link/visited link */
+}
+
+/* dropdown btn for more */
+.dropdown-btn{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    font-size: 16px;
+    color: black;
+}
+    
+/* dropdown btn's icon targetting */
+.dropdown-btn i{
+    margin-right: 18px;
+    margin-left: 3px;
+}
+
+/* dropdown btn's anchor tags targetting */
+.dropdown-container a{
+    color: black;
+    display: block;
+    padding: 14px;
+}
+
+/* dropdown btn's icons targetting */
+.dropdown-container i{
+    margin-right: 10px;
+    padding-left: 7px;
+}
+
+/* dropdown btn's spam icon targetting */
+.dropdown-container .spam{
+    margin-left: 3px;
+    margin-right: 14px;
+}
+
+/* hide the html code containing this class */
+.dropdown-container{
+    display: none;              
+}
+
+/* setting the border bottom line for these */
+.meet-div, .hangouts-div{
+    border-bottom: 1px groove;
+}
+
+/* targetting these classes */
+.meet-div .meet-heading, .hangouts-div .hangouts-heading{
+    padding: 10px 20px 8px 20px;
+    font-size: 20px;
+}
+
+/* targetting this class of message */
+.message-container{
+    border-bottom: 1px groove;
+    margin-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* targetting this paragraph of message */
+.message-container p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* targetting these icon at the last of three-icons class*/
+.three-icons{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+/* and its anchor tags of three-icons class */
+.three-icons a{
+    padding: 8px;
+}
+
+/* and its icon of three-icons class */
+.three-icons i{
+    color: blue;
+}
+
+                                            /* styling tabs here */
+
+/* main division for tabs */
+#main{
+    position: fixed;
+    left: 301px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* for buttons */
+.tablinks{
+    width: 350px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-style: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* for icons */
+.tablinks span{
+    margin-right: 10px;
+}
+
+/* hover effects */
+.tablinks:hover{
+    background-color: lightgray;
+}
+
+#main #b1:hover, #main #a1:hover{
+    color: red;
+    border-bottom: 1px groove red;
+}
+
+#main #b2:hover, #main #a2:hover{
+    color: green;
+    border-bottom: 1px groove green;
+}
+
+#main #b3:hover, #main #a3:hover{
+    color: blue;
+    border-bottom: 1px groove blue;
+}
+
+                                        /* form here */
+
+/* compose message */
+/* main message form */
+.form-popup{
+    background-color: whitesmoke;
+    width: 70vh;
+    height: 70vh;
+    position: relative;
+    left: 800px;
+    top: 116px;
+    border-left: 1px groove;
+    border-right: 1px groove;
+    display: none;
+}
+
+/* first division for message box */
+.msg-first-div{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px groove;
+    background-color:rgb(54, 69, 79);
+    cursor: pointer;
+}
+
+.msg-first-div h2{
+    margin-left: 10px;
+    font-size: small;
+    color: white;
+}
+
+.msg-first-div i{
+    position: relative;
+    left: 240px;
+    color: white;
+    padding: 10px;
+}
+
+/* second division for message box */
+.msg-second-div input{
+    width: 95.4%;
+    border: none;
+    padding: 10px;
+    border-bottom: 1px groove;
+    outline: none;                  /* when input is typed, its border outline is none */
+}
+
+.msg-second-div textarea{
+    width: 417px;
+    height: 275px;
+    border: none;
+    border-bottom: 1px groove;
+    outline: none;
+    padding: 10px;
+}
+
+/* third division for message box */
+
+.msg-third-div .send-btn{
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color:blue;
+    padding: 5px;
+    margin-left: 5px;
+    margin-top: 0px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.msg-third-div .send-btn i{
+    color: white;
+    padding-left: 10px;
+}
+
+.msg-third-div{
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+.msg-third-div span{
+    padding: 2px;
+    font-size:1.5em;
+    cursor: pointer;
+}
+
+.msg-third-div span:hover{
+    background-color: gray;
+    border-radius: 50%; /* circle border*/
+}
+
+.msg-third-div .icon-one{
+    margin-left: 20px;
+}
+
+.msg-third-div .more-icon{
+    margin-left: 120px;
+}
+
+.msg-third-div .send-btn:hover{
+    background-color: gray;
+}
+
+
+                                /* styling app pop form here */
+.app-form{
+    background-color: whitesmoke;
+    width: 40vh;
+    height: 40vh;
+    position: relative;
+    right: -1105px;
+    top: -15px;
+    border: 3px groove;
+    display: none;
+    border-style: groove;
+    border-radius: 10px;
+    overflow-y: scroll;  /*add scroll bar according to...*/
+    background-color: white;
+}
+
+.apps-container{
+   display: grid;  /* display in grid */
+   grid-template-columns: auto auto auto;  /*add 3 items in one row*/
+}
+
+.apps-container img{
+    max-width: 55%; 
+    height: auto;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.apps-container img:hover{
+    background-color: gray;
+    border-radius: 50%; /* circle border*/
+}
+
+.apps-container .docs, .apps-container .meet, .apps-container .photos, .apps-container .youtube, .apps-container .hang,
+.apps-container .tour{
+    margin-left: 10px;
+}
+
+
+

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- using font awesome and google icons for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Gmail</title>
+</head>
+<body>
+    <!-- header starting from here -->
+    <div class="header">
+        <div class="header-left">
+            <button class="hide-sidebar" onclick="clickNav()">
+                <i class="fa fa-solid fa-bars fa-lg"></i>
+            </button>
+            <img src="images/newgmaillogo.0.jpg" alt="">
+        </div>
+        <div class="header-middle">
+            <i class="fa fa-search fa-magnifying-glass"></i>
+            <input type="search" placeholder="Search Mail">
+            <i class="fa fa-solid fa-caret-down"></i>
+        </div>
+        <div class="header-right">
+            <span class="material-icons">help_outline</span>
+            <i class="fa fa-solid fa-gear"></i>
+            <button class="app-btn" onclick="openApps()">
+                <span class="material-icons">apps</span>
+            </button>
+            <span class="material-icons">account_circle</span>
+        </div>
+    </div>
+    <!-- header ends here -->
+
+                                    <!-- another division starts from here -->
+
+    <!-- nav bar starting from here -->
+    <div class="side-bar" id="mySidebar">
+        <button class="sidebar-compose" onclick="openForm()">
+            <i class="fa fa-solid fa-plus fa-lg"></i>
+            Compose
+        </button>
+        <div class="vertical-menu">
+            <a href="#" class="active">
+                <i class="fa fa-solid fa-inbox"></i>
+                Inbox
+            </a>
+            <a href="#">
+                <i class="fa fa-solid fa-star"></i>
+                Starred
+            </a>
+            <a href="#">
+                <i class="fa fa-solid fa-pause"></i>
+                Snoozed
+            </a>
+            <a href="#">
+                <i class="fa fa-solid fa-arrow-right"></i>
+                Sent
+            </a>
+            <a href="#">
+                <i class="fa fa-solid fa-file"></i>
+                Drafts
+            </a>
+            <button id="txt-btn" class="dropdown-btn" >
+                <i class="fa fa-caret-down"></i>
+                More
+            </button>
+            <!-- div for that more button/ what that more contains inside it starts from here -->
+            <div class="dropdown-container">        
+                <a href="#">
+                    <i class="fa fa-solid fa-comments"></i>
+                    Chats
+                </a>
+                <a href="#">
+                    <i class="fa fa-solid fa-exclamation spam"></i>
+                    Spam
+                </a>
+                <a href="#">
+                    <i class="fa fa-solid fa-trash"></i>
+                    Trash
+                </a>
+                <a href="#">
+                    <i class="fa fa-solid fa-envelope"></i>
+                    All Mail
+                </a>
+            </div>
+            <!-- div for that more button ends here -->
+        </div>
+        <div class="meet-div">
+            <h3 class="meet-heading">Meet</h3>
+            <a href="#">
+                <i class="fa fa-solid fa-quote-left"></i>
+                My Meetings
+            </a>
+        </div>
+        <div class="hangouts-div">
+            <h3 class="hangouts-heading">Meet</h3>
+            <a href="#">
+                <i class="fa fa-solid fa-id-card"></i>
+                Hangouts
+            </a>
+        </div>
+        <div class="message-container">
+            <p>No recent Chats</p>
+            <p>Start a new one</p>
+        </div>
+        <div class="three-icons">
+            <a href="#">
+                <i class="fa fa-solid fa-id-card"></i>
+            </a><a href="#">
+                <i class="fa fa-solid fa-comment"></i>
+            </a><a href="#">
+                <i class="fa fa-solid fa-phone"></i>
+            </a>
+        </div>
+    </div>
+    <!-- nav bar ends here -->
+
+                                    <!-- another division starts from here -->
+    <div id="main">
+        <button id="a1" class="tablinks" onclick="openCity(event, 'London')">
+            <span id="b1" class="material-icons">stay_primary_portrait</span>
+            Primary
+        </button>
+        <button id="a2" class="tablinks" onclick="openCity(event, 'Paris')">
+            <span id="b2" class="material-icons">group</span>
+            Social
+        </button>
+        <button id="a3" class="tablinks" onclick="openCity(event, 'Tokyo')">
+            <span id="b3" class="material-icons">local_offer</span>
+            Promotion
+        </button>
+    </div>
+                                     <!-- another division ends here -->
+    <div class="form-popup" id="myForm">                           <!-- form is enclosed inside a division -->
+        <form action="/action_page.php" class="form-container">
+            <div class="msg-first-div">
+                <h2>New Message</h2>
+                <i class="fa fa-solid fa-window-minimize mini" onclick="hideMyForm()"></i>
+                <i class="fa fa-solid fa-expand"></i>
+                <i class="fa fa-solid fa-ban" onclick="hideMyForm()"></i>
+            </div>
+            <div class="msg-second-div">
+                <input type="text" name="sending-to" placeholder="To">
+                <input type="text" name="subject" placeholder="Subject">
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="msg-third-div">
+                <button class="send-btn">
+                    Send
+                    <i class="fa fa-solid fa-share"></i>
+                </button>
+                <span class="material-icons icon-one">format_color_text</span>
+                <span class="material-icons">attach_file</span>
+                <span class="material-icons">link</span>
+                <span class="material-icons">
+                    emoji_emotions
+                    </span>
+                    <span class="material-icons">
+                        cloud_upload
+                        </span>
+                        <span class="material-icons">
+                            image
+                            </span>
+                            <span class="material-icons more-icon">
+                                more_vert
+                                </span>
+                                <span class="material-icons">
+                                    delete
+                                    </span>
+            </div>
+        </form>
+    </div>
+
+                        <!-- html code for applications menu form -->
+    <div class="app-form" id="app-popup">
+        <form action="/action_page.php" class="apps-container">
+            <img src="images/download (1).jpg" alt="" class="docs">
+            <img src="images/download (2).jpg" alt="" class="drive">
+            <img src="images/download.jpg" alt="" class="playstore">
+            <img src="images/meet.png" alt="" class="meet">
+            <img src="images/unnamed (1).png" alt="" class="calendar">
+            <img src="images/unnamed.png" alt="" class="googlesearch">
+            <img src="images/youtube.png" alt="" class="youtube">
+            <img src="images/doc.png" alt="" class="doc">
+            <img src="images/duo.png" alt="" class="duo">
+            <img src="images/photos.jpg" alt="" class="photos">
+            <img src="images/translate.jpg" alt="" class="translate">
+            <img src="images/chats.png" class="chats">
+            <img src="images/hang.png" alt="" class="hang">
+            <img src="images/class.png" alt="" class="classroom">
+            <img src="images/snap.png" alt="" class="snapchat">
+            <img src="images/tour.png" alt="" class="tour">
+            <img src="images/fb.png" alt="" class="fb">
+        </form>
+    </div>
+
+    <!-- linking script file with html file -->
+    <script src="script.js"></script>
+</body>
+</html>
